@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cycle Craft</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:#F5DEB3 ;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .cycle-image {
+            max-width: 100%;
+            height: auto;
+            border: 3px solid #2c3e50;
+        }
+        .categories {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+        .category {
+            width: 22%;
+            background-color: #ffffff;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            border-radius: 8px;
+        }
+        .category img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .category h3 {
+            margin-top: 15px;
+            font-size: 18px;
+            color: #2c3e50;
+        }
+        .description {
+            margin-top: 20px;
+            color: #2c3e50;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cycle Craft</h1>
+    <p class="description">Curious about the parts? Just click on them!</p>
+    <img src="cycle.jpg" usemap="#image-map" class="cycle-image">
+    <h2>Most Popular Categories</h2>
+    <div class="categories">
+        <div class="category">
+            <img src="road_bike.jpg" alt="Road Bike">
+            <h3>Road Bike</h3>
+        </div>
+        <div class="category">
+            <img src="electric_bike.webp" alt="Electric Bike">
+            <h3>Electric Bike</h3>
+        </div>
+        <div class="category">
+            <img src="mountain_bike.webp" alt="Mountain Bike">
+            <h3>Mountain Bike</h3>
+        </div>
+        <div class="category">
+            <img src="kids_bike.jpg" alt="Kids Bike">
+            <h3>Kids Bike</h3>
+        </div>
+    </div>
+
+    <map name="image-map">
+        <area target="_blank" alt="wheel1" title="wheel1" href="https://amzn.in/d/cfFzpSu" coords="184,293,101" shape="circle">
+        <area target="_blank" alt="wheel2" title="wheel2" href="https://amzn.in/d/cfFzpSu" coords="454,383,434,366,417,343,410,323,408,294,412,271,420,248,439,228,455,214,473,205,489,200,504,198,519,198,533,201,551,206,566,214,576,221,587,233,597,246,603,261,608,274,609,285,611,298,609,311,607,326,601,340,594,350,586,365,573,378,554,380" shape="poly">
+        <area target="_blank" alt="handlebar" title="handlebar" href="https://amzn.in/d/7bcdJhT" coords="238,79,239,75,244,74,246,75,242,75,251,90,264,90,267,88,269,86,265,82,259,82,253,82,252,85" shape="poly">
+        <area target="_blank" alt="waterbottleholder" title="waterbottleholder" href="https://amzn.in/d/j7zG9TA" coords="330,230,348,222,353,226,348,233,347,242,349,250,344,253,350,256,335,242" shape="poly">
+        <area target="_blank" alt="pedal" title="pedal" href="https://amzn.in/d/eh1ZZHJ" coords="329,315,336,317,329,344,321,342" shape="poly">
+        <area target="_blank" alt="seat" title="seat" href="https://amzn.in/d/c1n4biR" coords="387,135,396,132,407,131,421,134,433,134,447,136,457,136,462,140,463,147,458,151,450,154,441,155,431,153,421,149,406,143,394,141" shape="poly">
+    </map>
+</body>
+</html>
