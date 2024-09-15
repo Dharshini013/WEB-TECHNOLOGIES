@@ -1,0 +1,129 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0; /* Remove margin from body to eliminate space around the header */
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #2c3e50;
+    color: white;
+    position: fixed;
+    width: 100%; /* Make header span the full width of the screen */
+    top: 0; /* Stick header to the top */
+    left: 0; /* Stick header to the left side */
+    z-index: 1000; /* Ensure header stays above other content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+/* Logo Section */
+.logo {
+    font-family: 'Permanent Marker', cursive; /* Custom font for 'Cycle Craft' */
+    font-size: 28px;
+    color: #ffcc00;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none; /* Remove default bullets for list */
+}
+
+.nav-links li {
+    display: inline; /* Display the list items inline, next to each other */
+    margin-left: 20px; /* Space between navigation links */
+}
+
+.nav-links a {
+    text-decoration: none; /* Remove underlining from the links */
+    color: white; /* Set link text color to white */
+    font-size: 18px;
+    transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+.nav-links a:hover {
+    color: #ffcc00; /* Change link color to yellow on hover */
+}
+
+/* Content Styling for the Image and Text */
+.image-text-container {
+    display: flex;
+    justify-content: flex-start; /* Align items horizontally */
+    align-items: center; /* Align text to the center of the image vertically */
+    padding: 100px 20px 20px; /* Add padding to push content below the header */
+    gap: 40px; /* Space between image and text */
+}
+
+
+
+/* Text next to the image */
+.image-text-container p {
+    font-family: 'Roboto', sans-serif; /* Clean and readable font */
+    font-size: 20px;
+    line-height: 1.6; /* Improve readability */
+    color: #333;
+    max-width: 500px;
+    text-align:start; /* Align the text neatly */
+    
+}
+
+/* Footer (if you want to add one) */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.abc{
+    display: flex;
+    height: 50vh;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding-top:75px;
+    box-sizing: border-box;
+}
+/* Donation Section with Image and Button Below */
+.donation-section {
+    text-align: center; /* Center the image and button horizontally */
+    margin: 40px 0; /* Space around the section */
+}
+
+.donation-section img {
+    max-width: 100%; /* Ensure the image is responsive and fits the screen */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Space between the image and button */
+}
+
+/* Style for the Donate button */
+.donation-section .donate-button {
+    font-size: 18px;
+    color: white; /* White text */
+    background-color: #2c3e50; /* Dark blue button for contrast */
+    padding: 10px 20px; /* Button padding */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for button */
+.donation-section .donate-button:hover {
+    background-color: #34495e; /* Slightly lighter blue on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+}

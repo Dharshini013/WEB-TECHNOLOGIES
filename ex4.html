@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cycle Donation Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        /* Form Container */
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            margin: 0 auto;
+            max-width: 600px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 30px;
+            color: #4CAF50;
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        .form-group textarea {
+            resize:both;
+        }
+
+        .form-group input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+            margin-left: 10px;
+        }
+
+        /* Submit and Reset Buttons */
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .form-actions button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 4px;
+            width: 48%;
+        }
+
+        .form-actions button:hover {
+            background-color: #45a049;
+        }
+
+        /* CAPTCHA Section */
+        .captcha-container {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .captcha-code {
+            background-color: #ddd;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            margin-right: 10px;
+            border-radius: 4px;
+        }
+
+        .captcha-container input {
+            width: 150px;
+        }
+
+        .error {
+            color: red;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Donate Your Cycle</h2>
+        <form id="donationForm">
+            <!-- Donor Information -->
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+
+            <!-- Cycle Details -->
+            <div class="form-group">
+                <label for="cycleBrand">Cycle Brand/Model:</label>
+                <input type="text" id="cycleBrand" name="cycleBrand" required>
+            </div>
+
+            <div class="form-group">
+                <label for="cycleType">Cycle Type:</label>
+                <select id="cycleType" name="cycleType" required>
+                    <option value="">-- Select Cycle Type --</option>
+                    <option value="road">Road Bike</option>
+                    <option value="mountain">Mountain Bike</option>
+                    <option value="electric">Electric Bike</option>
+                    <option value="kids">Kids Bike</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="cycleCondition">Cycle Condition:</label>
+                <input type="radio" id="new" name="cycleCondition" value="new" required> New
+                <input type="radio" id="good" name="cycleCondition" value="good"> Good
+                <input type="radio" id="repair" name="cycleCondition" value="repair"> Needs Repair
+            </div>
+
+            <div class="form-group">
+                <label for="additionalInfo">Additional Information:</label>
+                <textarea id="additionalInfo" name="additionalInfo" rows="4"></textarea>
+            </div>
+
+            <!-- CAPTCHA -->
+            <div class="captcha-container">
+                <div class="captcha-code" id="captchaCode">7D5P2</div>
+                <input type="text" id="captchaInput" placeholder="Enter CAPTCHA" required>
+            </div>
+            <div class="error" id="captchaError"></div>
+
+            <!-- Form Actions -->
+            <div class="form-actions">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Simple CAPTCHA validation
+        const captchaCode = "7D5P2"; // Example CAPTCHA code
+
+        document.getElementById("donationForm").addEventListener("submit", function (e) {
+            e.preventDefault(); // Prevent form from submitting until CAPTCHA is checked
+            const captchaInput = document.getElementById("captchaInput").value;
+
+            if (captchaInput !== captchaCode) {
+                document.getElementById("captchaError").textContent = "Incorrect CAPTCHA, please try again!";
+            } else {
+                document.getElementById("captchaError").textContent = "";
+                alert("Form submitted successfully!");
+                this.submit();
+            }
+        });
+    </script>
+
+</body>
+</html>
