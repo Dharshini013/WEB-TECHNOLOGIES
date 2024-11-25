@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cycles>
+    <cycle>
+        <name>Road Bike</name>
+        <type>Racing</type>
+        <price>1500</price>
+    </cycle>
+    <cycle>
+        <name>Mountain Bike</name>
+        <type>Off-road</type>
+        <price>2000</price>
+    </cycle>
+    <cycle>
+        <name>Electric Bike</name>
+        <type>Hybrid</type>
+        <price>3000</price>
+    </cycle>
+</cycles>
