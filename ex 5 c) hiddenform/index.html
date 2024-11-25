@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Road Bike Information</title>
+    <style>
+        body {
+            background-color: #ffccbc;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+        }
+        p {
+            font-size: 20px;
+            color: #555;
+        }
+        form {
+            margin-top: 30px;
+        }
+        input[type='text'] {
+            padding: 8px 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #ff7043;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff5722;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Road Bikes</h1>
+    <p>Enter your name and choose the road bike for a thrilling ride!</p>
+
+    <!-- Form to enter name and submit bike type -->
+    <form method="post" action="cycleForm">
+        <input type="hidden" name="bike_type" value="road">
+        <label for="user_name">Your Name: </label>
+        <input type="text" id="user_name" name="user_name" required>
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
